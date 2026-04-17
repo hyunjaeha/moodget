@@ -2,12 +2,12 @@
 :root {
   /* Reference Token */
   /* Colors */
-  /* Primary */
-  --primary-100: #f0eeff;
-  --primary-200: #ddd9fd;
-  --primary-300: #c4b5fd;
-  --primary-400: #a78bfa;
-  --primary-500: #8b5cf6;
+  /* Primary Purple*/
+  --purple-100: #f0eeff;
+  --purple-200: #ddd9fd;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
 
   /* Secondary */
   --secondary-100: #e8e8f4;
@@ -44,20 +44,6 @@
   --sementic-neutral-default: #8a93a6;
   --sementic-neutral-text: #1e2533;
 
-  /* System Token */
-  /* Background */
-  --color-bg-primary: var(--secondary-900);
-
-  /* Text */
-  --color-text-primary: var(--primary-100);
-
-  /* Accent */
-  --accent-red: #f87171;
-  --accent-yellow: #fbbf24;
-  --accent-blue: #60a5fa;
-  --accent-green: #34d399;
-  --accent-orange: #fb923c;
-
   /* Spacing */
   --spacing-4: 4px;
   --spacing-8: 8px;
@@ -67,15 +53,37 @@
   --spacing-24: 24px;
 
   /* Font Size */
-  --size-sm: 14px;
-  --size-md: 16px;
-  --size-lg: 18px;
-  --size-xl: 20px;
-  --size-2xl: 22px;
-  --size-3xl: 24px;
-  --size-4xl: 28px;
-  --size-5xl: 36px;
-  --size-6xl: 42px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+  --font-2xl: 22px;
+  --font-3xl: 24px;
+  --font-4xl: 28px;
+  --font-5xl: 36px;
+  --font-6xl: 48px;
+
+  /* System Token */
+  /* Background */
+  --color-bg-primary: var(--secondary-900);
+
+  /* Text */
+  --color-text-primary: var(--purple-100);
+
+  /* Accent */
+  --accent-red: #f87171;
+  --accent-yellow: #fbbf24;
+  --accent-blue: #60a5fa;
+  --accent-green: #34d399;
+  --accent-orange: #fb923c;
+
+  /* Responsive */
+  /* Layout Spacing */
+  --layout-padding-sm: 16px;
+  --layout-padding-sm: 24px;
+
+  /* Container */
+  --container-max: 1280px;
 }
 
 /* css 리셋 */
@@ -88,9 +96,9 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
+  background-color: var(--color-bg-primary);
+  font-size: var(--font-md);
+  color: var(--color-text-primary);
 }
 ul,
 li {
@@ -106,3 +114,35 @@ img {
 }
 
 /* Component Token */
+/* Layout */
+.layout {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.outlet {
+  position: relative;
+  width: 100%;
+  max-width: var(--container-max);
+  flex: 1;
+  background-color: #d4d4d4;
+}
+
+@media screen and (min-width: 320px) {
+  .layout {
+    padding: 0 var(--layout-padding-sm);
+  }
+}
+@media screen and (min-width: 768px) {
+  .layout {
+    padding: 0 var(--layout-padding-sm);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .layout {
+    padding: 0;
+  }
+}
