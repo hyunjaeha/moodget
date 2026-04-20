@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css");
+
 /* Design Token */
 :root {
   /* Reference Token */
@@ -80,10 +82,45 @@
   /* Responsive */
   /* Layout Spacing */
   --layout-padding-sm: 16px;
-  --layout-padding-sm: 24px;
+  --layout-padding-md: 24px;
 
   /* Container */
   --container-max: 1280px;
+}
+
+/* Typography */
+.heading-1 {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+}
+.heading-2 {
+  font-size: var(--font-3xl);
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
+.heading-3 {
+  font-size: var(--font-2xl);
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+}
+
+.heading-4 {
+  font-size: var(--font-lg);
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+}
+
+.caption {
+  font-size: var(--font-sm);
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -0.02em;
 }
 
 /* css 리셋 */
@@ -99,6 +136,13 @@ body {
   background-color: var(--color-bg-primary);
   font-size: var(--font-md);
   color: var(--color-text-primary);
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    sans-serif;
 }
 ul,
 li {
@@ -109,40 +153,423 @@ a {
   text-decoration: none;
 }
 img {
+  display: block;
   border: 0;
-  vertical-align: middle;
+  object-fit: cover;
+  border: 0;
 }
 
 /* Component Token */
+/* Button */
+.btn {
+  /* 기본 스타일 제거 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: var(--purple-500);
+  color: var(--purple-100);
+  padding: var(--spacing-12);
+  width: 100%;
+  font-weight: 700;
+  border-radius: 12px;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--purple-100);
+  outline-offset: 2px;
+}
+
+/* 비활성 상태 */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+
+  font: inherit;
+  color: inherit;
+
+  cursor: pointer;
+
+  /* 최소 터치 영역 확보 */
+  min-width: 44px;
+  min-height: 44px;
+}
+
 /* Layout */
 .layout {
-  position: relative;
-  width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
-.outlet {
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* --------------------- Spalsh --------------------- */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
   position: relative;
   width: 100%;
   max-width: var(--container-max);
+  padding: 0 16px;
+  background-color: #12122a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex: 1;
-  background-color: #d4d4d4;
 }
 
-@media screen and (min-width: 320px) {
-  .layout {
-    padding: 0 var(--layout-padding-sm);
-  }
+.splash-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
+
+/* 로고 */
+.splash-content > img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 0 -10px 0;
+}
+
+/* Title */
+.splash-content > h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Subtitle */
+.splash-content > p {
+  font-size: var(--font-md);
+  font-weight: 400;
+  color: var(--secondary-300);
+  margin-bottom: 88px;
+}
+
+.splash-content > button {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.splash-content > button:first-of-type {
+  margin-top: 0;
+}
+
+/* Primary Button */
+.btn-primary {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: var(--purple-500);
+  color: var(--purple-100);
+  font-size: var(--font-md);
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7c3aed;
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--purple-100);
+  outline-offset: 2px;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background-color: var(--secondary-200);
+  color: var(--secondary-600);
+  font-size: var(--font-md);
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #b4b4d6;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--secondary-600);
+  outline-offset: 2px;
+}
+
+/* --------------------- Signin --------------------- */
+
+/* 페이지 전체 */
+.signin-page {
+  width: 100%;
+}
+
+/* 로그인 콘텐츠 */
+.signin-content {
+  width: 100%;
+}
+
+/* Back Button */
+.icon-btn {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+}
+
+.icon-btn-img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.back-btn {
+  position: absolute;
+  top: 0px;
+  left: 16px;
+}
+
+.back-btn:hover .icon-btn-img {
+  content: url("../assets/icons/left_hover.png");
+}
+
+/* Brand */
+.signin-brand {
+  text-align: center;
+}
+
+.signin-logo {
+  width: 49px;
+  height: 49px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.signin-brand-title {
+  margin-bottom: 4px;
+}
+
+.signin-brand-subtitle {
+  color: var(--secondary-300);
+}
+
+/* Section */
+.signin-section {
+  width: 100%;
+  margin-top: 52px;
+}
+
+.signin-title {
+  margin-bottom: 2px;
+}
+
+.signin-description {
+  color: var(--secondary-300);
+  margin-bottom: 28px;
+}
+
+/* Form */
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-label {
+  display: block;
+  font-size: var(--font-sm);
+  margin-bottom: 5px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  border: 1px solid var(--gray-400);
+  border-radius: 6px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--color-text-primary);
+  font-size: var(--font-md);
+  font-family: inherit;
+}
+
+.input-field::placeholder {
+  color: var(--gray-400);
+}
+
+/* input focus */
+.input-box:focus-within {
+  border-color: var(--purple-400);
+}
+
+/* Login Button */
+.signin-btn {
+  width: 100%;
+  margin-top: 46px;
+  height: 46px;
+}
+
+/* Social */
+.social-login {
+  width: 100%;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.social-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.social-divider span {
+  flex: 1;
+  height: 1px;
+  background-color: var(--secondary-600);
+}
+
+.social-divider p {
+  font-size: var(--font-sm);
+  color: var(--secondary-300);
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.social-btn.kakao {
+  background-color: #fee500;
+}
+
+.social-btn.apple {
+  background-color: #000;
+}
+
+.social-btn.google {
+  background-color: #fff;
+}
+
+/* Signup Link */
+.signup-link-text {
+  font-size: var(--font-sm);
+  color: var(--secondary-300);
+}
+
+.signup-link {
+  margin-left: 4px;
+  color: var(--purple-300);
+  font-weight: 600;
+}
+
+/* 반응형 */
 @media screen and (min-width: 768px) {
-  .layout {
-    padding: 0 var(--layout-padding-sm);
+  .signin-page .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .back-btn {
+    left: 24px;
   }
 }
+
 @media screen and (min-width: 1024px) {
-  .layout {
-    padding: 0;
+  .signin-page .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .back-btn {
+    left: 40px;
   }
 }

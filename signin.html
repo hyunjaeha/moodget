@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signin | Moodget</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <main class="main signin-page">
+        <div class="container">
+          <button
+            class="icon-btn back-btn"
+            type="button"
+            aria-label="뒤로가기"
+            onclick="location.href = 'index.html'"
+          >
+            <img src="assets/icons/left.png" alt="" class="icon-btn-img" />
+          </button>
+
+          <div class="signin-content">
+            <div class="signin-brand">
+              <img
+                src="assets/icons/logo.png"
+                alt="Moodget 로고"
+                class="signin-logo"
+              />
+              <h1 class="heading-1 signin-brand-title">Moodget</h1>
+              <p class="signin-brand-subtitle">오늘 소비, 기분은 어땠나요?</p>
+            </div>
+
+            <section class="signin-section">
+              <h2 class="heading-3 signin-title">로그인</h2>
+              <p class="caption signin-description">계속하려면 로그인하세요</p>
+
+              <form class="signin-form">
+                <div class="input-group">
+                  <label for="email" class="input-label">이메일</label>
+                  <div class="input-box">
+                    <img
+                      src="assets/icons/mail.png"
+                      alt=""
+                      class="input-icon"
+                    />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="hello@moodget.com"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="password" class="input-label">비밀번호</label>
+                  <div class="input-box">
+                    <img
+                      src="assets/icons/lock.png"
+                      alt=""
+                      class="input-icon"
+                    />
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="••••••••"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-primary signin-btn">
+                  로그인
+                </button>
+              </form>
+            </section>
+
+            <div class="social-login">
+              <div class="social-divider">
+                <span></span>
+                <p>또는 소셜 로그인</p>
+                <span></span>
+              </div>
+
+              <div class="social-buttons">
+                <button
+                  type="button"
+                  class="social-btn kakao"
+                  aria-label="카카오 로그인"
+                >
+                  <img src="assets/icons/kakao.png" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn apple"
+                  aria-label="애플 로그인"
+                >
+                  <img src="assets/icons/apple.png" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn google"
+                  aria-label="구글 로그인"
+                >
+                  <img src="assets/icons/google.png" alt="" />
+                </button>
+              </div>
+
+              <p class="signup-link-text">
+                아직 계정이 없으신가요?
+                <a href="signup.html" class="signup-link">회원가입</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
