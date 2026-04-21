@@ -446,8 +446,8 @@ button:disabled {
 }
 
 .input-icon {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   flex-shrink: 0;
 }
 
@@ -476,19 +476,20 @@ button:disabled {
   width: 100%;
   margin-top: 46px;
   height: 46px;
+  border-radius: 6px;
 }
 
 /* Social */
 .social-login {
   width: 100%;
-  margin-top: 32px;
+  margin-top: 84px;
   text-align: center;
 }
 
 .social-divider {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
   margin-bottom: 20px;
 }
 
@@ -500,19 +501,19 @@ button:disabled {
 
 .social-divider p {
   font-size: var(--font-sm);
-  color: var(--secondary-300);
+  color: var(--secondary-200);
 }
 
 .social-buttons {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .social-btn {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -522,8 +523,8 @@ button:disabled {
 }
 
 .social-btn img {
-  width: 24px;
-  height: 24px;
+  width: 54px;
+  height: 54px;
   display: block;
 }
 
@@ -541,16 +542,14 @@ button:disabled {
 
 /* Signup Link */
 .signup-link-text {
-  font-size: var(--font-sm);
   color: var(--secondary-300);
 }
 
 .signup-link {
-  margin-left: 4px;
-  color: var(--purple-300);
+  margin-left: 5px;
+  color: var(--purple-200);
   font-weight: 600;
 }
-
 /* 반응형 */
 @media screen and (min-width: 768px) {
   .signin-page .container {
