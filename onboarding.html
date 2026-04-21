@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding | Moodget</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <main class="main onboarding-page">
+        <div class="container">
+          <div class="onboarding-content">
+            <div class="progress-bar">
+              <span class="progress-step active"></span>
+              <span class="progress-step"></span>
+              <span class="progress-step"></span>
+            </div>
+
+            <section class="onboarding-section">
+              <p class="heading-4 onboarding-step">Step 1 of 3</p>
+              <h1 class="heading-2 onboarding-title">
+                매달 얼마나 쓰는지<br />
+                같이 알아봐요
+              </h1>
+              <p class="caption onboarding-description">
+                솔직하게 답해줘도 괜찮아요
+              </p>
+
+              <div class="option-list">
+                <button type="button" class="option-card is-selected">
+                  <div class="option-left">
+                    <div class="option-icon-wrap">
+                      <img
+                        src="assets/icons/light.png"
+                        alt=""
+                        class="option-icon"
+                      />
+                    </div>
+
+                    <div class="option-text">
+                      <strong class="option-title">잘 알아요</strong>
+                      <p class="option-description">
+                        매달 지출을 파악하고 있어요
+                      </p>
+                    </div>
+                  </div>
+
+                  <span class="option-check" aria-hidden="true"></span>
+                </button>
+
+                <button type="button" class="option-card">
+                  <div class="option-left">
+                    <div class="option-icon-wrap">
+                      <img
+                        src="assets/icons/soso.png"
+                        alt=""
+                        class="option-icon"
+                      />
+                    </div>
+
+                    <div class="option-text">
+                      <strong class="option-title">대충 알아요</strong>
+                      <p class="option-description">
+                        어느 정도는 알지만 정확하진 않아요
+                      </p>
+                    </div>
+                  </div>
+
+                  <span class="option-check" aria-hidden="true"></span>
+                </button>
+
+                <button type="button" class="option-card">
+                  <div class="option-left">
+                    <div class="option-icon-wrap">
+                      <img
+                        src="assets/icons/sad.png"
+                        alt=""
+                        class="option-icon"
+                      />
+                    </div>
+
+                    <div class="option-text">
+                      <strong class="option-title">잘 몰라요</strong>
+                      <p class="option-description">
+                        카드 명세서 나와야 알아요
+                      </p>
+                    </div>
+                  </div>
+
+                  <span class="option-check" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <div class="onboarding-actions">
+                <button type="button" class="btn-primary onboarding-next-btn">
+                  다음
+                </button>
+                <button
+                  type="button"
+                  class="onboarding-skip-btn"
+                  onclick="location.href = 'home.html'"
+                >
+                  나중에 할게요
+                </button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script>
+  const cards = document.querySelectorAll(".option-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      cards.forEach((c) => c.classList.remove("is-selected"));
+
+      //  클릭한 카드 선택
+      card.classList.add("is-selected");
+    });
+  });
+</script>

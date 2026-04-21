@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | Moodget</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <main class="main signup-page">
+        <div class="container">
+          <button
+            class="icon-btn back-btn"
+            type="button"
+            aria-label="뒤로가기"
+            onclick="location.href = 'signin.html'"
+          >
+            <img src="assets/icons/left.png" alt="" class="icon-btn-img" />
+          </button>
+
+          <div class="signup-content">
+            <section class="signup-section">
+              <h1 class="heading-2 signup-title">회원가입</h1>
+
+              <form class="signup-form">
+                <div class="input-group">
+                  <label for="name" class="input-label">이름</label>
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="홍길동"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="email" class="input-label">이메일</label>
+                  <div class="input-box">
+                    <img
+                      src="assets/icons/mail.png"
+                      alt=""
+                      class="input-icon"
+                    />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="hello@moodget.com"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="password" class="input-label">비밀번호</label>
+                  <div class="input-box">
+                    <img
+                      src="assets/icons/lock.png"
+                      alt=""
+                      class="input-icon"
+                    />
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="••••••••"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label for="password-confirm" class="input-label"
+                    >비밀번호 확인</label
+                  >
+                  <div class="input-box">
+                    <img
+                      src="assets/icons/lock.png"
+                      alt=""
+                      class="input-icon"
+                    />
+                    <input
+                      type="password"
+                      id="password-confirm"
+                      name="password-confirm"
+                      placeholder="••••••••"
+                      class="input-field"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="btn-primary signup-btn"
+                  onclick="location.href = 'onboarding.html'"
+                >
+                  회원가입
+                </button>
+              </form>
+            </section>
+
+            <div class="social-login signup-social">
+              <div class="social-divider">
+                <span></span>
+                <p class="caption">또는 소셜 로그인</p>
+                <span></span>
+              </div>
+
+              <div class="social-buttons">
+                <button
+                  type="button"
+                  class="social-btn kakao"
+                  aria-label="카카오 회원가입"
+                >
+                  <img src="assets/icons/kakao.png" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn apple"
+                  aria-label="애플 회원가입"
+                >
+                  <img src="assets/icons/apple.png" alt="" />
+                </button>
+                <button
+                  type="button"
+                  class="social-btn google"
+                  aria-label="구글 회원가입"
+                >
+                  <img src="assets/icons/google.png" alt="" />
+                </button>
+              </div>
+
+              <p class="caption signup-link-text">
+                이미 계정이 있으신가요?
+                <a href="signin.html" class="signup-link">로그인</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
