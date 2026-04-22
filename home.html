@@ -8,9 +8,9 @@
   </head>
   <body>
     <div class="layout">
-      <main class="main home-page">
-        <div class="container">
-          <header class="home-header">
+      <header class="home-header">
+        <div class="home-header-container">
+          <div class="home-header-inner">
             <a href="home.html" class="home-brand">
               <img
                 src="assets/icons/logo.png"
@@ -27,8 +27,12 @@
                 class="home-profile-img"
               />
             </button>
-          </header>
+          </div>
+        </div>
+      </header>
 
+      <main class="main home-page">
+        <div class="container">
           <section class="home-summary">
             <p class="home-subtitle">안녕하세요, 지수님</p>
             <h2 class="home-title">3월 소비 현황</h2>
@@ -73,7 +77,7 @@
                     alt=""
                     class="emotion-icon"
                   />
-                  <span class="caption">충돌</span>
+                  <span class="caption">충동</span>
                 </div>
                 <div class="emotion-item">
                   <img
@@ -105,7 +109,7 @@
 
           <section class="recent-spending">
             <div class="section-header">
-              <h3 class="heading-4 section-title">최근 지출</h3>
+              <p class="section-title">최근 지출</p>
               <a href="#" class="view-all-link">
                 <span>전체보기</span>
                 <img
@@ -120,15 +124,15 @@
               <article class="spending-card">
                 <div class="spending-main">
                   <div>
-                    <h4 class="spending-title">스타벅스</h4>
+                    <h4 class="spending-title heading-3">스타벅스</h4>
                     <p class="spending-category">카페</p>
                   </div>
 
                   <div class="spending-right">
-                    <strong class="spending-amount">₩ 6,500</strong>
+                    <strong class="spending-amount heading-3">₩ 6,500</strong>
                     <div class="emotion-chip impulse-chip">
                       <img
-                        src="assets/icons/impulse.png"
+                        src="assets/icons/impulse_stroke.png"
                         alt=""
                         class="chip-icon"
                       />
@@ -141,15 +145,15 @@
               <article class="spending-card">
                 <div class="spending-main">
                   <div>
-                    <h4 class="spending-title">헬스장</h4>
+                    <h4 class="spending-title heading-3">헬스장</h4>
                     <p class="spending-category">건강</p>
                   </div>
 
                   <div class="spending-right">
-                    <strong class="spending-amount">₩ 75,000</strong>
+                    <strong class="spending-amount heading-3">₩ 75,000</strong>
                     <div class="emotion-chip reward-chip">
                       <img
-                        src="assets/icons/reward.png"
+                        src="assets/icons/reward_stroke.png"
                         alt=""
                         class="chip-icon"
                       />
@@ -162,15 +166,15 @@
               <article class="spending-card">
                 <div class="spending-main">
                   <div>
-                    <h4 class="spending-title">쿠팡</h4>
+                    <h4 class="spending-title heading-3">쿠팡</h4>
                     <p class="spending-category">쇼핑</p>
                   </div>
 
                   <div class="spending-right">
-                    <strong class="spending-amount">₩ 32,000</strong>
+                    <strong class="spending-amount heading-3">₩ 32,000</strong>
                     <div class="emotion-chip regret-chip">
                       <img
-                        src="assets/icons/regret.png"
+                        src="assets/icons/regret_stroke.png"
                         alt=""
                         class="chip-icon"
                       />
@@ -200,43 +204,31 @@
             <span>홈</span>
           </a>
 
-          <a href="#" class="bottom-nav-item">
-            <img
-              src="assets/icons/record.png"
-              alt=""
-              class="nav-icon default-icon"
-            />
+          <a href="record.html" class="bottom-nav-item">
+            <img src="assets/icons/record.png" class="nav-icon default-icon" />
             <img
               src="assets/icons/record_hover.png"
-              alt=""
               class="nav-icon hover-icon"
             />
             <span>기록</span>
           </a>
 
-          <a href="#" class="bottom-nav-item">
+          <a href="calender.html" class="bottom-nav-item">
             <img
               src="assets/icons/calender.png"
-              alt=""
               class="nav-icon default-icon"
             />
             <img
               src="assets/icons/calender_hover.png"
-              alt=""
               class="nav-icon hover-icon"
             />
             <span>캘린더</span>
           </a>
 
-          <a href="#" class="bottom-nav-item">
-            <img
-              src="assets/icons/setting.png"
-              alt=""
-              class="nav-icon default-icon"
-            />
+          <a href="setting.html" class="bottom-nav-item">
+            <img src="assets/icons/setting.png" class="nav-icon default-icon" />
             <img
               src="assets/icons/setting_hover.png"
-              alt=""
               class="nav-icon hover-icon"
             />
             <span>설정</span>
@@ -275,28 +267,3 @@
     </script>
   </body>
 </html>
-
-<script>
-  const ring = document.querySelector(".chart-ring");
-
-  if (ring) {
-    const percentText = document.querySelector(".chart-percent");
-
-    let current = 0;
-    const target = 205;
-
-    const animate = () => {
-      if (current < target) {
-        current += 3;
-        ring.style.setProperty("--progress", current);
-
-        const percent = Math.floor((current / 360) * 100);
-        percentText.textContent = percent + "%";
-
-        requestAnimationFrame(animate);
-      }
-    };
-
-    animate();
-  }
-</script>

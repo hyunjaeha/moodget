@@ -104,7 +104,7 @@
 
 .heading-3 {
   font-size: var(--font-2xl);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 30px;
   letter-spacing: -0.02em;
 }
@@ -782,17 +782,44 @@ button:disabled {
 
 .home-page .container {
   justify-content: flex-start;
-  padding-top: 0;
+  padding-top: 72px;
   padding-bottom: 110px;
 }
 
 .home-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-primary);
+  border-bottom: 1px solid var(--secondary-600);
+  z-index: 10;
+}
+
+.home-header-container {
   width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.home-header-inner {
   min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--secondary-600);
+}
+
+@media screen and (min-width: 768px) {
+  .home-header-container {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-header-container {
+    padding: 0 40px;
+  }
 }
 
 .home-brand {
@@ -977,23 +1004,23 @@ button:disabled {
 }
 
 .emotion-bar-item.reward {
-  width: 28%;
-  background-color: #39e7b7;
+  width: 32%;
+  background-color: var(--sementic-reward-default);
 }
 
 .emotion-bar-item.impulse {
-  width: 24%;
-  background-color: #ffd84d;
+  width: 20%;
+  background-color: var(--sementic-impulse-default);
 }
 
 .emotion-bar-item.happy {
-  width: 32%;
-  background-color: #ff5ca8;
+  width: 28%;
+  background-color: var(--sementic-happy-default);
 }
 
 .emotion-bar-item.regret {
-  width: 16%;
-  background-color: #9b7bff;
+  width: 14%;
+  background-color: var(--sementic-regret-default);
 }
 
 .emotion-legend {
@@ -1021,6 +1048,7 @@ button:disabled {
 .recent-spending {
   width: 100%;
   margin-top: 44px;
+  color: var(--secondary-200);
 }
 
 .section-header {
@@ -1038,8 +1066,11 @@ button:disabled {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  color: var(--secondary-300);
+}
+
+.view-all-link:hover {
   color: var(--secondary-200);
-  font-size: 14px;
 }
 
 .view-all-icon {
@@ -1055,13 +1086,13 @@ button:disabled {
 .spending-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--spacing-12);
 }
 
 .spending-card {
   width: 100%;
   background-color: var(--secondary-700);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 22px 16px;
 }
 
@@ -1073,59 +1104,41 @@ button:disabled {
 }
 
 .spending-title {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-bottom: 4px;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-4);
 }
 
 .spending-category {
-  color: var(--secondary-300);
+  color: var(--secondary-400);
 }
 
 .spending-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: var(--spacing-4);
   flex-shrink: 0;
 }
 
 .spending-amount {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
+  color: var(--color-text-primary);
 }
 
 .emotion-chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 36px;
+  gap: var(--spacing-4);
+  min-height: 35px;
   border-radius: 10px;
-  padding: 0 12px;
-  font-size: 14px;
+  padding: 0 10px;
+  background-color: var(--secondary-600);
+  font-weight: 500;
 }
 
 .chip-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-}
-
-.reward-chip {
-  background-color: rgba(57, 231, 183, 0.16);
-  color: var(--purple-100);
-}
-
-.impulse-chip {
-  background-color: rgba(255, 216, 77, 0.16);
-  color: var(--purple-100);
-}
-
-.regret-chip {
-  background-color: rgba(155, 123, 255, 0.16);
-  color: var(--purple-100);
 }
 
 .home-footer {
@@ -1154,14 +1167,18 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: var(--spacing-4);
   font-size: 12px;
-  color: var(--purple-100);
+}
+
+.bottom-nav-item.active,
+.bottom-nav-item:hover {
+  color: var(--purple-300);
 }
 
 .nav-icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -1181,21 +1198,6 @@ button:disabled {
 
 .bottom-nav-item.active {
   color: var(--purple-300);
-}
-
-/* 반응형 */
-@media screen and (min-width: 768px) {
-  .bottom-nav {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .bottom-nav {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
 }
 
 /* 반응형 */
