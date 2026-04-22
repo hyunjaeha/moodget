@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record | Moodget</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="app-header">
+        <div class="app-header-container">
+          <div class="app-header-inner">
+            <a href="home.html" class="app-brand">
+              <img src="assets/icons/logo.png" class="app-logo" />
+              <h1 class="heading-2 app-brand-title">Moodget</h1>
+            </a>
+
+            <button class="app-profile-btn">
+              <img src="assets/icons/profile.png" class="app-profile-img" />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main record-page">
+        <div class="container">
+          <button
+            class="icon-btn back-btn"
+            type="button"
+            aria-label="뒤로가기"
+            onclick="location.href = 'home.html'"
+          >
+            <img
+              src="assets/icons/left.png"
+              alt=""
+              class="icon-btn-img default-icon"
+            />
+            <img
+              src="assets/icons/left_hover.png"
+              alt=""
+              class="icon-btn-img hover-icon"
+            />
+          </button>
+          <section class="record-intro">
+            <h2 class="heading-2 record-title">지출 기록</h2>
+            <p class="record-description">오늘 얼마를 썼나요?</p>
+          </section>
+
+          <section class="record-form-section">
+            <div class="record-card amount-card">
+              <label for="amount" class="record-card-label"> 금액 </label>
+              <input
+                type="text"
+                id="amount"
+                class="heading-2 amount-field"
+                value="₩ "
+              />
+            </div>
+
+            <div class="record-card category-card">
+              <p class="record-card-label">카테고리</p>
+              <div class="category-list">
+                <button type="button" class="category-chip">식비</button>
+                <button type="button" class="category-chip">카페</button>
+                <button type="button" class="category-chip">쇼핑</button>
+                <button type="button" class="category-chip">교통</button>
+                <button type="button" class="category-chip">건강</button>
+                <button type="button" class="category-chip">문화</button>
+                <button type="button" class="category-chip">구독</button>
+                <button type="button" class="category-chip">기타</button>
+              </div>
+            </div>
+
+            <div class="emotion-section">
+              <p class="emotion-section-title">지금 기분이 어때요?</p>
+
+              <div class="emotion-select-list">
+                <button type="button" class="emotion-select-chip reward">
+                  <img
+                    src="assets/icons/reward_stroke.png"
+                    alt=""
+                    class="emotion-select-icon"
+                  />
+                  <span>보람있음</span>
+                </button>
+
+                <button type="button" class="emotion-select-chip happy">
+                  <img
+                    src="assets/icons/happy_stroke.png"
+                    alt=""
+                    class="emotion-select-icon"
+                  />
+                  <span>행복함</span>
+                </button>
+
+                <button type="button" class="emotion-select-chip impulse">
+                  <img
+                    src="assets/icons/impulse_stroke.png"
+                    alt=""
+                    class="emotion-select-icon"
+                  />
+                  <span>충동구매</span>
+                </button>
+
+                <button type="button" class="emotion-select-chip regret">
+                  <img
+                    src="assets/icons/regret_stroke.png"
+                    alt=""
+                    class="emotion-select-icon"
+                  />
+                  <span>후회됨</span>
+                </button>
+
+                <button type="button" class="emotion-select-chip neutral">
+                  <img
+                    src="assets/icons/neutral_stroke.png"
+                    alt=""
+                    class="emotion-select-icon"
+                  />
+                  <span>그냥저냥</span>
+                </button>
+
+                <button type="button" class="emotion-select-chip add">
+                  <span class="emotion-add-plus">+</span>
+                  <span>추가</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="record-card memo-card">
+              <textarea
+                id="memo"
+                class="memo-field caption"
+                placeholder="메모를 입력하세요 (선택)"
+              ></textarea>
+            </div>
+
+            <p class="form-error-message"></p>
+
+            <button
+              type="button"
+              class="btn-primary record-submit-btn"
+              disabled
+            >
+              기록 완료
+            </button>
+          </section>
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        <nav class="bottom-nav">
+          <a href="home.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/home.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/home_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="bottom-nav-item active">
+            <img
+              src="assets/icons/record.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/record_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/calender.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/setting.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/setting_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <script>
+      const amountInput = document.getElementById("amount");
+      const categoryChips = document.querySelectorAll(".category-chip");
+      const emotionChips = document.querySelectorAll(
+        ".emotion-select-chip:not(.add)",
+      );
+      const submitBtn = document.querySelector(".record-submit-btn");
+      const errorMessage = document.querySelector(".form-error-message");
+
+      // 버튼 활성화 체크
+      function checkFormValid() {
+        const amountValue = amountInput.value.replace(/[^0-9]/g, "");
+        const categorySelected = document.querySelector(
+          ".category-chip.is-selected",
+        );
+        const emotionSelected = document.querySelector(
+          ".emotion-select-chip.is-selected",
+        );
+
+        submitBtn.disabled = !(
+          amountValue &&
+          categorySelected &&
+          emotionSelected
+        );
+      }
+
+      // 에러 검사
+      function validateForm() {
+        const amountValue = amountInput.value.replace(/[^0-9]/g, "");
+        const categorySelected = document.querySelector(
+          ".category-chip.is-selected",
+        );
+        const emotionSelected = document.querySelector(
+          ".emotion-select-chip.is-selected",
+        );
+
+        if (!amountValue) return "금액을 입력해주세요";
+        if (!categorySelected) return "카테고리를 선택해주세요";
+        if (!emotionSelected) return "기분을 선택해주세요";
+
+        return "";
+      }
+
+      // 에러 지우기
+      function clearError() {
+        errorMessage.textContent = "";
+      }
+
+      // 금액 input 포커스 시 커서 위치 고정
+      amountInput.addEventListener("focus", () => {
+        setTimeout(() => {
+          amountInput.setSelectionRange(2, 2);
+        }, 0);
+      });
+
+      // 금액 입력 제한
+      amountInput.addEventListener("keydown", (e) => {
+        const cursorPos = amountInput.selectionStart;
+
+        if (e.key === "Backspace" && cursorPos <= 2) {
+          e.preventDefault();
+          return;
+        }
+
+        if (cursorPos < 2 && e.key.length === 1) {
+          e.preventDefault();
+          return;
+        }
+
+        const allowedKeys = [
+          "Backspace",
+          "ArrowLeft",
+          "ArrowRight",
+          "Tab",
+          "Delete",
+        ];
+
+        if (allowedKeys.includes(e.key)) return;
+
+        if (!/^[0-9]$/.test(e.key)) {
+          e.preventDefault();
+        }
+      });
+
+      // 금액 입력 시 ₩ 유지 + 숫자만 허용
+      amountInput.addEventListener("input", () => {
+        const value = amountInput.value.replace(/[^0-9]/g, "");
+        amountInput.value = "₩ " + value;
+
+        clearError();
+        checkFormValid();
+      });
+
+      // 카테고리 선택
+      categoryChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          categoryChips.forEach((c) => c.classList.remove("is-selected"));
+          chip.classList.add("is-selected");
+
+          clearError();
+          checkFormValid();
+        });
+      });
+
+      // 기분 선택
+      emotionChips.forEach((chip) => {
+        chip.addEventListener("click", () => {
+          emotionChips.forEach((c) => c.classList.remove("is-selected"));
+          chip.classList.add("is-selected");
+
+          clearError();
+          checkFormValid();
+        });
+      });
+
+      // 버튼 클릭
+      submitBtn.addEventListener("click", () => {
+        const error = validateForm();
+
+        if (error) {
+          errorMessage.textContent = error;
+          return;
+        }
+
+        errorMessage.textContent = "";
+        alert("기록 완료!");
+      });
+
+      // 초기 상태 확인
+      checkFormValid();
+    </script>
+  </body>
+</html>

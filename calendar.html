@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar | Moodget</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- 헤더 -->
+      <header class="app-header">
+        <div class="app-header-container">
+          <div class="app-header-inner">
+            <a href="home.html" class="app-brand">
+              <img src="assets/icons/logo.png" alt="" class="app-logo" />
+              <h1 class="heading-2 app-brand-title">Moodget</h1>
+            </a>
+
+            <button class="app-profile-btn" type="button">
+              <img
+                src="assets/icons/profile.png"
+                alt=""
+                class="app-profile-img"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 메인 -->
+      <main class="main calendar-page">
+        <div class="container">
+          <!-- 뒤로가기 -->
+          <button
+            class="icon-btn back-btn"
+            type="button"
+            onclick="location.href = 'home.html'"
+          >
+            <img
+              src="assets/icons/left.png"
+              alt=""
+              class="icon-btn-img default-icon"
+            />
+            <img
+              src="assets/icons/left_hover.png"
+              alt=""
+              class="icon-btn-img hover-icon"
+            />
+          </button>
+
+          <!-- 캘린더 -->
+          <section class="calendar-section">
+            <!-- 헤더 -->
+            <div class="calendar-header-row">
+              <h2 class="heading-2 calendar-title">2026년 4월</h2>
+
+              <div class="calendar-nav">
+                <button type="button" class="calendar-nav-btn">
+                  <img src="assets/icons/left.png" alt="" />
+                </button>
+                <button type="button" class="calendar-nav-btn">
+                  <img src="assets/icons/right.png" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <!-- 요일 -->
+            <div class="calendar-weekdays caption">
+              <span>SUN</span>
+              <span>MON</span>
+              <span>TUE</span>
+              <span>WED</span>
+              <span>THU</span>
+              <span>FRI</span>
+              <span>SAT</span>
+            </div>
+
+            <!-- 날짜 -->
+            <div class="calendar-grid">
+              <button class="calendar-day empty"></button>
+              <button class="calendar-day empty"></button>
+              <button class="calendar-day empty"></button>
+
+              <button class="calendar-day">
+                <span class="day-number">1</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">2</span>
+                <img src="assets/icons/impulse.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">3</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">4</span>
+                <img src="assets/icons/happy.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">5</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">6</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">7</span>
+                <img src="assets/icons/neutral.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">8</span>
+                <img src="assets/icons/regret.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">9</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">10</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">11</span>
+                <img src="assets/icons/impulse.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">12</span>
+                <img src="assets/icons/regret.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">13</span>
+                <img src="assets/icons/impulse.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">14</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">15</span>
+                <img src="assets/icons/happy.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">16</span>
+                <img src="assets/icons/neutral.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">17</span>
+                <img src="assets/icons/reward.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">18</span>
+                <img src="assets/icons/happy.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">19</span>
+                <img src="assets/icons/happy.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">20</span>
+                <img src="assets/icons/neutral.png" class="day-emotion-icon" />
+              </button>
+
+              <button class="calendar-day is-selected">
+                <span class="day-number">21</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">22</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">23</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">24</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">25</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">26</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">27</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">28</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">29</span>
+              </button>
+
+              <button class="calendar-day">
+                <span class="day-number">30</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- 기록 -->
+          <section class="calendar-record-section">
+            <div class="calendar-divider"></div>
+
+            <h3 class="heading-4 calendar-record-title">4월 21일 기록</h3>
+
+            <div class="calendar-record-list">
+              <article class="calendar-record-card">
+                <div class="calendar-record-top">
+                  <div class="calendar-record-left">
+                    <h4 class="heading-3 calendar-record-name">쿠팡</h4>
+                    <p class="calendar-record-category">쇼핑</p>
+                  </div>
+
+                  <div class="calendar-record-right">
+                    <strong class="calendar-record-amount">₩ 32,000</strong>
+
+                    <span class="calendar-emotion-chip">
+                      <img
+                        src="assets/icons/impulse.png"
+                        class="calendar-emotion-chip-icon"
+                      />
+                      <span>충동구매</span>
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+
+      <footer class="app-footer">
+        <nav class="bottom-nav">
+          <a href="home.html" class="bottom-nav-item active">
+            <img
+              src="assets/icons/home.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/home_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="bottom-nav-item">
+            <img src="assets/icons/record.png" class="nav-icon default-icon" />
+            <img
+              src="assets/icons/record_hover.png"
+              class="nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/calender.png"
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              class="nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="bottom-nav-item">
+            <img src="assets/icons/setting.png" class="nav-icon default-icon" />
+            <img
+              src="assets/icons/setting_hover.png"
+              class="nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
