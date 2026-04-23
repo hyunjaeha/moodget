@@ -1,26 +1,71 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moodget</title>
+    <title>Splash | Moodget</title>
+    <link rel="icon" href="assets/icons/favicon.png" />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="layout">
+      <!-- splash overlay -->
+      <div class="splash-overlay" id="splashOverlay">
+        <div class="splash-center">
+          <div class="splash-logo-wrap">
+            <span class="splash-dot dot-reward"></span>
+            <span class="splash-dot dot-happy"></span>
+            <span class="splash-dot dot-impulse"></span>
+            <span class="splash-dot dot-regret"></span>
+            <span class="splash-dot dot-neutral"></span>
+
+            <img
+              src="assets/icons/logo_m.png"
+              alt="Moodget 로고"
+              class="splash-main-logo"
+            />
+          </div>
+
+          <h1 class="splash-title">Moodget</h1>
+          <p class="splash-subtitle">오늘 소비, 기분은 어땠나요?</p>
+        </div>
+      </div>
+
+      <!-- 실제 index 내용 -->
       <main class="main">
         <div class="container">
-          <div class="splash-content">
-            <img src="assets/icons/logo_white.png" />
+          <div class="splash-content index-content">
+            <img src="assets/icons/logo_white.png" alt="Moodget 로고" />
             <h1>Moodget</h1>
             <p class="splash-subtitle">오늘 소비, 기분은 어땠나요?</p>
-            <button class="btn-primary" onclick="location.href = 'signin.html'">
-              로그인 또는 회원가입
-            </button>
-            <button class="btn-secondary">게스트로 계속하기</button>
+
+            <div class="splash-button-group">
+              <button
+                class="btn-primary"
+                onclick="location.href = 'signin.html'"
+              >
+                로그인 또는 회원가입
+              </button>
+              <button class="btn-secondary">게스트로 계속하기</button>
+            </div>
           </div>
         </div>
       </main>
     </div>
+
+    <script>
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splashOverlay");
+
+        setTimeout(() => {
+          splash.classList.add("is-hidden");
+        }, 1400);
+
+        setTimeout(() => {
+          splash.style.display = "none";
+        }, 2200);
+      });
+    </script>
   </body>
 </html>

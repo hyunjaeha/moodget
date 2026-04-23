@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lognin | Moodget</title>
+    <title>Signin | Moodget</title>
+    <link rel="icon" href="assets/icons/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -55,12 +56,14 @@
 
                 <div class="input-group">
                   <label for="password" class="input-label">비밀번호</label>
+
                   <div class="input-box">
                     <img
                       src="assets/icons/lock.png"
                       alt=""
                       class="input-icon"
                     />
+
                     <input
                       type="password"
                       id="password"
@@ -68,6 +71,10 @@
                       placeholder="••••••••"
                       class="input-field"
                     />
+
+                    <button type="button" class="password-toggle">
+                      <img src="assets/icons/eye_off.png" class="eye-icon" />
+                    </button>
                   </div>
                 </div>
 
@@ -76,46 +83,47 @@
                 </button>
               </form>
             </section>
+          </div>
 
-            <div class="social-login">
-              <div class="social-divider">
-                <span></span>
-                <p class="caption">또는 소셜 로그인</p>
-                <span></span>
-              </div>
-
-              <div class="social-buttons">
-                <button
-                  type="button"
-                  class="social-btn kakao"
-                  aria-label="카카오 로그인"
-                >
-                  <img src="assets/icons/kakao.png" alt="" />
-                </button>
-                <button
-                  type="button"
-                  class="social-btn apple"
-                  aria-label="애플 로그인"
-                >
-                  <img src="assets/icons/apple.png" alt="" />
-                </button>
-                <button
-                  type="button"
-                  class="social-btn google"
-                  aria-label="구글 로그인"
-                >
-                  <img src="assets/icons/google.png" alt="" />
-                </button>
-              </div>
-
-              <p class="caption signup-link-text">
-                아직 계정이 없으신가요?
-                <a href="signup.html" class="signup-link">회원가입</a>
-              </p>
+          <div class="social-login">
+            <div class="social-divider">
+              <span></span>
+              <p class="caption">또는 소셜 로그인</p>
+              <span></span>
             </div>
+
+            <div class="social-buttons">
+              <button
+                type="button"
+                class="social-btn kakao"
+                aria-label="카카오 로그인"
+              >
+                <img src="assets/icons/kakao.png" alt="" />
+              </button>
+              <button
+                type="button"
+                class="social-btn apple"
+                aria-label="애플 로그인"
+              >
+                <img src="assets/icons/apple.png" alt="" />
+              </button>
+              <button
+                type="button"
+                class="social-btn google"
+                aria-label="구글 로그인"
+              >
+                <img src="assets/icons/google.png" alt="" />
+              </button>
+            </div>
+
+            <p class="caption signup-link-text">
+              아직 계정이 없으신가요?
+              <a href="signup.html" class="signup-link">회원가입</a>
+            </p>
           </div>
         </div>
       </main>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
