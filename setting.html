@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting | Moodget</title>
+    <link rel="icon" href="assets/icons/favicon.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- 헤더 -->
+      <header class="app-header">
+        <div class="app-header-container">
+          <div class="app-header-inner">
+            <a href="home.html" class="app-brand">
+              <img src="assets/icons/logo.png" alt="" class="app-logo" />
+              <h1 class="heading-2 app-brand-title">Moodget</h1>
+            </a>
+
+            <button class="app-profile-btn" type="button">
+              <img
+                src="assets/icons/profile.png"
+                alt=""
+                class="app-profile-img"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main setting-page">
+        <div class="container">
+          <section class="setting-intro">
+            <h2 class="heading-2 setting-title">예산 설정</h2>
+            <p class="setting-description">월 목표 예산을 설정하세요</p>
+          </section>
+
+          <!-- 월 전체 예산 -->
+          <section class="setting-section">
+            <article class="setting-budget-card">
+              <p class="setting-card-label caption">월 전체 예산</p>
+              <strong class="heading-2 setting-total-amount">₩ 500,000</strong>
+
+              <div class="budget-progress">
+                <span class="budget-progress-fill total-fill"></span>
+              </div>
+
+              <p class="setting-card-subtext caption">
+                이번 달 284,500 사용(57%)
+              </p>
+            </article>
+          </section>
+
+          <!-- 카테고리별 예산 -->
+          <section class="setting-section category-budget-section">
+            <div class="section-header setting-section-header">
+              <p class="section-title">카테고리별 예산</p>
+              <a href="#" class="view-all-link">
+                <span>전체보기</span>
+                <img
+                  src="assets/icons/right.png"
+                  alt=""
+                  class="view-all-icon"
+                />
+              </a>
+            </div>
+
+            <div class="category-budget-list">
+              <article class="category-budget-card">
+                <div class="category-budget-top">
+                  <p class="category-budget-name">식비</p>
+                  <strong class="category-budget-amount heading-3"
+                    >₩ 150,000</strong
+                  >
+                </div>
+                <div class="budget-progress">
+                  <span class="budget-progress-fill food-fill"></span>
+                </div>
+              </article>
+
+              <article class="category-budget-card">
+                <div class="category-budget-top">
+                  <p class="category-budget-name">카페</p>
+                  <strong class="category-budget-amount heading-3"
+                    >₩ 50,000</strong
+                  >
+                </div>
+                <div class="budget-progress">
+                  <span class="budget-progress-fill cafe-fill"></span>
+                </div>
+              </article>
+
+              <article class="category-budget-card">
+                <div class="category-budget-top">
+                  <p class="category-budget-name">쇼핑</p>
+                  <strong class="category-budget-amount heading-3"
+                    >₩ 74,000</strong
+                  >
+                </div>
+                <div class="budget-progress">
+                  <span class="budget-progress-fill shopping-fill"></span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- 알림 설정 -->
+          <section class="setting-section notification-section">
+            <p class="section-title setting-notification-title">알림 설정</p>
+
+            <article class="setting-notification-card">
+              <label class="setting-toggle-row">
+                <span class="setting-toggle-text">예산 80% 초과 알림</span>
+                <input type="checkbox" class="setting-toggle-input" checked />
+                <span class="setting-toggle-slider"></span>
+              </label>
+
+              <label class="setting-toggle-row">
+                <span class="setting-toggle-text">매일 저녁 기록 알림</span>
+                <input type="checkbox" class="setting-toggle-input" checked />
+                <span class="setting-toggle-slider"></span>
+              </label>
+
+              <label class="setting-toggle-row">
+                <span class="setting-toggle-text">월말 리포트 알림</span>
+                <input type="checkbox" class="setting-toggle-input" checked />
+                <span class="setting-toggle-slider"></span>
+              </label>
+            </article>
+          </section>
+        </div>
+      </main>
+
+      <!-- 푸터 -->
+      <footer class="app-footer">
+        <nav class="bottom-nav">
+          <a href="home.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/home.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/home_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/record.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/record_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="bottom-nav-item">
+            <img
+              src="assets/icons/calender.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="bottom-nav-item active">
+            <img
+              src="assets/icons/setting.png"
+              alt=""
+              class="nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/setting_hover.png"
+              alt=""
+              class="nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

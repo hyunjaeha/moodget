@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onboarding | Moodget</title>
+    <link rel="icon" href="assets/icons/favicon.png" />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -11,24 +13,28 @@
       <main class="main onboarding-page">
         <div class="container">
           <div class="onboarding-content">
-            <div class="progress-bar">
+            <div class="progress-bar fade-up delay-1">
               <span class="progress-step active"></span>
               <span class="progress-step"></span>
               <span class="progress-step"></span>
             </div>
 
             <section class="onboarding-section">
-              <p class="heading-4 onboarding-step">Step 1 of 3</p>
-              <h1 class="heading-2 onboarding-title">
+              <p class="heading-4 onboarding-step fade-up delay-2">
+                Step 1 of 3
+              </p>
+
+              <h1 class="heading-2 onboarding-title fade-up delay-3">
                 매달 얼마나 쓰는지<br />
                 같이 알아봐요
               </h1>
-              <p class="caption onboarding-description">
+
+              <p class="caption onboarding-description fade-up delay-4">
                 솔직하게 답해줘도 괜찮아요
               </p>
 
               <div class="option-list">
-                <button type="button" class="option-card is-selected">
+                <button type="button" class="option-card fade-up delay-5">
                   <div class="option-left">
                     <div class="option-icon-wrap">
                       <img
@@ -49,7 +55,7 @@
                   <span class="option-check" aria-hidden="true"></span>
                 </button>
 
-                <button type="button" class="option-card">
+                <button type="button" class="option-card fade-up delay-6">
                   <div class="option-left">
                     <div class="option-icon-wrap">
                       <img
@@ -70,7 +76,7 @@
                   <span class="option-check" aria-hidden="true"></span>
                 </button>
 
-                <button type="button" class="option-card">
+                <button type="button" class="option-card fade-up delay-7">
                   <div class="option-left">
                     <div class="option-icon-wrap">
                       <img
@@ -92,13 +98,17 @@
                 </button>
               </div>
 
-              <div class="onboarding-actions">
-                <button type="button" class="btn-primary onboarding-next-btn">
+              <div class="onboarding-actions fade-up delay-8">
+                <button
+                  type="button"
+                  class="btn-primary onboarding-next-btn"
+                  disabled
+                >
                   다음
                 </button>
                 <button
                   type="button"
-                  class="onboarding-skip-btn"
+                  class="onboarding-skip-btn caption"
                   onclick="window.location.href = 'home.html'"
                 >
                   나중에 할게요
@@ -109,18 +119,6 @@
         </div>
       </main>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
-
-<script>
-  const cards = document.querySelectorAll(".option-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      cards.forEach((c) => c.classList.remove("is-selected"));
-
-      //  클릭한 카드 선택
-      card.classList.add("is-selected");
-    });
-  });
-</script>

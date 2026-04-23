@@ -1,18 +1,31 @@
-//온보딩 카드 선택 시
 document.addEventListener("DOMContentLoaded", () => {
+  // 온보딩
   const cards = document.querySelectorAll(".option-card");
   const nextBtn = document.querySelector(".onboarding-next-btn");
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      // 기존 선택 제거
       cards.forEach((c) => c.classList.remove("is-selected"));
-
-      // 선택
       card.classList.add("is-selected");
-
-      // 버튼 활성화
       if (nextBtn) nextBtn.disabled = false;
+    });
+  });
+
+  // 비밀번호 토글
+  const toggles = document.querySelectorAll(".password-toggle");
+
+  toggles.forEach((toggleBtn) => {
+    const inputBox = toggleBtn.closest(".input-box");
+    const input = inputBox.querySelector(".input-field");
+    const eyeIcon = toggleBtn.querySelector(".eye-icon");
+
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = input.type === "password";
+
+      input.type = isHidden ? "text" : "password";
+      eyeIcon.src = isHidden
+        ? "assets/icons/eye_on.png"
+        : "assets/icons/eye_off.png";
     });
   });
 });
