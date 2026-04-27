@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="layout">
+      <!-- header -->
       <header class="app-header">
         <div class="app-header-container">
           <div class="app-header-inner">
@@ -182,6 +183,7 @@
         </div>
       </main>
 
+      <!-- footer -->
       <footer class="app-footer">
         <nav class="bottom-nav">
           <a href="home.html" class="bottom-nav-item active">
@@ -230,34 +232,6 @@
         </nav>
       </footer>
     </div>
-
-    <script>
-      const ring = document.querySelector(".chart-ring");
-      const percentText = document.querySelector(".chart-percent");
-
-      if (ring && percentText) {
-        let current = 0;
-        const targetPercent = 57;
-        const targetDeg = Math.round((360 * targetPercent) / 100);
-
-        const animate = () => {
-          if (current < targetDeg) {
-            current += 3;
-            if (current > targetDeg) current = targetDeg;
-
-            ring.style.setProperty("--progress", current);
-
-            const percent = Math.floor((current / 360) * 100);
-            percentText.textContent = percent + "%";
-
-            requestAnimationFrame(animate);
-          } else {
-            percentText.textContent = targetPercent + "%";
-          }
-        };
-
-        animate();
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
