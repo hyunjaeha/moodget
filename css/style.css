@@ -1682,13 +1682,6 @@ img {
   font-weight: 700;
 }
 
-.form-error-message {
-  color: #ff5c5c;
-  font-size: 14px;
-  margin-top: 8px;
-  min-height: 18px;
-}
-
 /* --------------------- Calendar --------------------- */
 
 .calendar-page {

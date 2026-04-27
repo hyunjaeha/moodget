@@ -121,8 +121,6 @@
               ></textarea>
             </div>
 
-            <p class="form-error-message"></p>
-
             <button
               type="button"
               class="btn-primary record-submit-btn"
@@ -242,7 +240,7 @@
         errorMessage.textContent = "";
       }
 
-      // 금액 input 포커스 시 커서 위치 고정
+      // 커서 위치 고정
       amountInput.addEventListener("focus", () => {
         setTimeout(() => {
           amountInput.setSelectionRange(2, 2);
@@ -280,8 +278,10 @@
 
       // 금액 입력 시 ₩ 유지 + 숫자만 허용
       amountInput.addEventListener("input", () => {
-        const value = amountInput.value.replace(/[^0-9]/g, "");
-        amountInput.value = "₩ " + value;
+        const raw = amountInput.value.replace(/[^0-9]/g, "");
+        const formatted = raw.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+        amountInput.value = "₩ " + formatted;
 
         clearError();
         checkFormValid();
@@ -304,21 +304,12 @@
           emotionChips.forEach((c) => c.classList.remove("is-selected"));
           chip.classList.add("is-selected");
 
-          clearError();
           checkFormValid();
         });
       });
 
       // 버튼 클릭
       submitBtn.addEventListener("click", () => {
-        const error = validateForm();
-
-        if (error) {
-          errorMessage.textContent = error;
-          return;
-        }
-
-        errorMessage.textContent = "";
         alert("기록 완료!");
       });
 
