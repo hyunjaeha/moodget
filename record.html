@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="layout">
+      <!-- header -->
       <header class="app-header">
         <div class="app-header-container">
           <div class="app-header-inner">
@@ -132,6 +133,7 @@
         </div>
       </main>
 
+      <!-- footer -->
       <footer class="app-footer">
         <nav class="bottom-nav">
           <a href="home.html" class="bottom-nav-item">
@@ -192,129 +194,6 @@
         </nav>
       </footer>
     </div>
-    <script>
-      const amountInput = document.getElementById("amount");
-      const categoryChips = document.querySelectorAll(".category-chip");
-      const emotionChips = document.querySelectorAll(
-        ".emotion-select-chip:not(.add)",
-      );
-      const submitBtn = document.querySelector(".record-submit-btn");
-      const errorMessage = document.querySelector(".form-error-message");
-
-      // 버튼 활성화 체크
-      function checkFormValid() {
-        const amountValue = amountInput.value.replace(/[^0-9]/g, "");
-        const categorySelected = document.querySelector(
-          ".category-chip.is-selected",
-        );
-        const emotionSelected = document.querySelector(
-          ".emotion-select-chip.is-selected",
-        );
-
-        submitBtn.disabled = !(
-          amountValue &&
-          categorySelected &&
-          emotionSelected
-        );
-      }
-
-      // 에러 검사
-      function validateForm() {
-        const amountValue = amountInput.value.replace(/[^0-9]/g, "");
-        const categorySelected = document.querySelector(
-          ".category-chip.is-selected",
-        );
-        const emotionSelected = document.querySelector(
-          ".emotion-select-chip.is-selected",
-        );
-
-        if (!amountValue) return "금액을 입력해주세요";
-        if (!categorySelected) return "카테고리를 선택해주세요";
-        if (!emotionSelected) return "기분을 선택해주세요";
-
-        return "";
-      }
-
-      // 에러 지우기
-      function clearError() {
-        errorMessage.textContent = "";
-      }
-
-      // 커서 위치 고정
-      amountInput.addEventListener("focus", () => {
-        setTimeout(() => {
-          amountInput.setSelectionRange(2, 2);
-        }, 0);
-      });
-
-      // 금액 입력 제한
-      amountInput.addEventListener("keydown", (e) => {
-        const cursorPos = amountInput.selectionStart;
-
-        if (e.key === "Backspace" && cursorPos <= 2) {
-          e.preventDefault();
-          return;
-        }
-
-        if (cursorPos < 2 && e.key.length === 1) {
-          e.preventDefault();
-          return;
-        }
-
-        const allowedKeys = [
-          "Backspace",
-          "ArrowLeft",
-          "ArrowRight",
-          "Tab",
-          "Delete",
-        ];
-
-        if (allowedKeys.includes(e.key)) return;
-
-        if (!/^[0-9]$/.test(e.key)) {
-          e.preventDefault();
-        }
-      });
-
-      // 금액 입력 시 ₩ 유지 + 숫자만 허용
-      amountInput.addEventListener("input", () => {
-        const raw = amountInput.value.replace(/[^0-9]/g, "");
-        const formatted = raw.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        amountInput.value = "₩ " + formatted;
-
-        clearError();
-        checkFormValid();
-      });
-
-      // 카테고리 선택
-      categoryChips.forEach((chip) => {
-        chip.addEventListener("click", () => {
-          categoryChips.forEach((c) => c.classList.remove("is-selected"));
-          chip.classList.add("is-selected");
-
-          clearError();
-          checkFormValid();
-        });
-      });
-
-      // 기분 선택
-      emotionChips.forEach((chip) => {
-        chip.addEventListener("click", () => {
-          emotionChips.forEach((c) => c.classList.remove("is-selected"));
-          chip.classList.add("is-selected");
-
-          checkFormValid();
-        });
-      });
-
-      // 버튼 클릭
-      submitBtn.addEventListener("click", () => {
-        alert("기록 완료!");
-      });
-
-      // 초기 상태 확인
-      checkFormValid();
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

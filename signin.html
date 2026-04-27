@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,25 @@
     <link rel="icon" href="assets/icons/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="layout">
+      <!-- Header -->
+      <header class="app-header signin-header">
+        <div class="app-header-container">
+          <div class="app-header-inner">
+            <a href="index.html" class="app-brand">
+              <img
+                src="assets/icons/logo.png"
+                alt="Moodget 로고"
+                class="app-logo"
+              />
+              <span class="heading-2 app-brand-title">Moodget</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
       <main class="main signin-page">
         <div class="container">
           <button
@@ -19,6 +36,46 @@
           >
             <img src="assets/icons/left.png" alt="" class="icon-btn-img" />
           </button>
+
+          <div class="signin-desktop-visual">
+            <div class="signin-desktop-copy">
+              <h2>
+                “왜 샀는지를<br />
+                기록하는 감정 가계부”
+              </h2>
+              <p>
+                소비에 감정을 더하면<br />
+                내 소비 습관이 보이기 시작해요
+              </p>
+            </div>
+
+            <div class="signin-emotion-grid">
+              <div>
+                <img src="assets/icons/reward.png" alt="" />
+                <span>보람있음</span>
+              </div>
+
+              <div>
+                <img src="assets/icons/happy.png" alt="" />
+                <span>행복함</span>
+              </div>
+
+              <div>
+                <img src="assets/icons/impulse.png" alt="" />
+                <span>충동구매</span>
+              </div>
+
+              <div>
+                <img src="assets/icons/regret.png" alt="" />
+                <span>후회됨</span>
+              </div>
+
+              <div>
+                <img src="assets/icons/neutral.png" alt="" />
+                <span>그냥저냥</span>
+              </div>
+            </div>
+          </div>
 
           <div class="signin-content">
             <div class="signin-brand">
@@ -73,7 +130,11 @@
                     />
 
                     <button type="button" class="password-toggle">
-                      <img src="assets/icons/eye_off.png" class="eye-icon" />
+                      <img
+                        src="assets/icons/eye_off.png"
+                        alt=""
+                        class="eye-icon"
+                      />
                     </button>
                   </div>
                 </div>
@@ -100,6 +161,7 @@
               >
                 <img src="assets/icons/kakao.png" alt="" />
               </button>
+
               <button
                 type="button"
                 class="social-btn apple"
@@ -107,6 +169,7 @@
               >
                 <img src="assets/icons/apple.png" alt="" />
               </button>
+
               <button
                 type="button"
                 class="social-btn google"
@@ -124,6 +187,7 @@
         </div>
       </main>
     </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>
