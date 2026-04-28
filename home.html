@@ -26,80 +26,103 @@
         </div>
       </header>
 
+      <!-- desktop sidebar nav -->
+      <aside class="desktop-sidebar">
+        <nav class="side-nav">
+          <a href="home.html" class="side-nav-item active">
+            <img
+              src="assets/icons/home_hover.png"
+              alt=""
+              class="side-nav-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="side-nav-item">
+            <img
+              src="assets/icons/record.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/record_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="side-nav-item">
+            <img
+              src="assets/icons/calender.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="side-nav-item">
+            <img
+              src="assets/icons/setting.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/setting_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </aside>
+
       <main class="main home-page">
         <div class="container">
           <section class="home-summary">
             <p class="home-subtitle">안녕하세요, 지수님</p>
-            <h2 class="home-title">3월 소비 현황</h2>
+            <h2 class="home-title heading-2">3월 소비 현황</h2>
 
-            <article class="summary-card">
-              <div class="summary-top">
+            <div class="summary-card-group">
+              <article class="summary-card">
+                <div class="summary-top">
+                  <div class="summary-chart">
+                    <div class="chart-ring">
+                      <div class="chart-center">
+                        <strong class="chart-percent">0%</strong>
+                        <span class="chart-label caption">사용</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="summary-info">
+                    <p class="summary-info-label caption">이번 달 지출</p>
+                    <h2 class="summary-amount">₩ 284,500</h2>
+                    <p class="summary-subtext caption">예산 ₩ 500,000 중</p>
+                  </div>
+                </div>
+
+                <div class="emotion-bar">
+                  <span class="emotion-bar-item reward"></span>
+                  <span class="emotion-bar-item impulse"></span>
+                  <span class="emotion-bar-item happy"></span>
+                  <span class="emotion-bar-item regret"></span>
+                </div>
+              </article>
+
+              <!-- 태블릿, 데스크탑 레이아웃 -->
+              <article class="summary-chart-card">
                 <div class="summary-chart">
                   <div class="chart-ring">
                     <div class="chart-center">
-                      <strong class="chart-percent">57%</strong>
+                      <strong class="chart-percent">0%</strong>
                       <span class="chart-label caption">사용</span>
                     </div>
                   </div>
                 </div>
 
-                <div class="summary-info">
-                  <p class="summary-info-label">이번 달 지출</p>
-                  <h2 class="summary-amount">₩ 284,500</h2>
-                  <p class="summary-subtext">예산 ₩ 500,000 중</p>
-                </div>
-              </div>
-
-              <div class="emotion-bar">
-                <span class="emotion-bar-item reward"></span>
-                <span class="emotion-bar-item impulse"></span>
-                <span class="emotion-bar-item happy"></span>
-                <span class="emotion-bar-item regret"></span>
-              </div>
-
-              <div class="emotion-legend">
-                <div class="emotion-item">
-                  <img
-                    src="assets/icons/reward.png"
-                    alt=""
-                    class="emotion-icon"
-                  />
-                  <span class="caption">보람</span>
-                </div>
-                <div class="emotion-item">
-                  <img
-                    src="assets/icons/impulse.png"
-                    alt=""
-                    class="emotion-icon"
-                  />
-                  <span class="caption">충동</span>
-                </div>
-                <div class="emotion-item">
-                  <img
-                    src="assets/icons/happy.png"
-                    alt=""
-                    class="emotion-icon"
-                  />
-                  <span class="caption">행복</span>
-                </div>
-                <div class="emotion-item">
-                  <img
-                    src="assets/icons/regret.png"
-                    alt=""
-                    class="emotion-icon"
-                  />
-                  <span class="caption">후회</span>
-                </div>
-                <div class="emotion-item">
-                  <img
-                    src="assets/icons/neutral.png"
-                    alt=""
-                    class="emotion-icon"
-                  />
-                  <span class="caption">그냥저냥</span>
-                </div>
-              </div>
-            </article>
+                <p class="chart-card-text">예산의 57% 사용</p>
+              </article>
+            </div>
           </section>
 
           <section class="recent-spending">
