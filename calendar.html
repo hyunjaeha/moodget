@@ -30,6 +30,59 @@
         </div>
       </header>
 
+      <!-- desktop sidebar nav -->
+      <aside class="desktop-sidebar">
+        <nav class="side-nav">
+          <a href="home.html" class="side-nav-item">
+            <img
+              src="assets/icons/home.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/home_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="side-nav-item">
+            <img
+              src="assets/icons/record.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/record_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="side-nav-item active">
+            <img
+              src="assets/icons/calender.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="side-nav-item">
+            <img
+              src="assets/icons/setting.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/setting_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </aside>
+
       <main class="main calendar-page">
         <div class="container">
           <!-- 캘린더 -->
@@ -247,6 +300,11 @@
 
             <p class="calendar-record-title">4월 21일 기록</p>
 
+            <article class="calendar-total-card">
+              <p class="calendar-total-label">오늘 총 지출</p>
+              <strong class="calendar-total-amount heading-2">₩ 107,000</strong>
+            </article>
+
             <div class="spending-list calendar-spending-list">
               <article class="spending-card">
                 <div class="spending-main">
@@ -290,6 +348,11 @@
                 </div>
               </article>
             </div>
+
+            <button class="calendar-add-btn btn-primary" type="button">
+              <span class="plus">+</span>
+              <span class="text">지출 추가</span>
+            </button>
           </section>
         </div>
       </main>

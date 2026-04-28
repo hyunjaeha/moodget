@@ -30,6 +30,59 @@
         </div>
       </header>
 
+      <!-- desktop sidebar nav -->
+      <aside class="desktop-sidebar">
+        <nav class="side-nav">
+          <a href="home.html" class="side-nav-item">
+            <img
+              src="assets/icons/home.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/home_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>홈</span>
+          </a>
+
+          <a href="record.html" class="side-nav-item">
+            <img
+              src="assets/icons/record.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/record_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>기록</span>
+          </a>
+
+          <a href="calendar.html" class="side-nav-item">
+            <img
+              src="assets/icons/calender.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/calender_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>캘린더</span>
+          </a>
+
+          <a href="setting.html" class="side-nav-item active">
+            <img
+              src="assets/icons/setting.png"
+              class="side-nav-icon default-icon"
+            />
+            <img
+              src="assets/icons/setting_hover.png"
+              class="side-nav-icon hover-icon"
+            />
+            <span>설정</span>
+          </a>
+        </nav>
+      </aside>
+
       <main class="main setting-page">
         <div class="container">
           <section class="setting-intro">
@@ -103,6 +156,17 @@
                   <span class="budget-progress-fill shopping-fill"></span>
                 </div>
               </article>
+              <article class="category-budget-card traffic-budget-card">
+                <div class="category-budget-top">
+                  <p class="category-budget-name">교통</p>
+                  <strong class="category-budget-amount heading-3"
+                    >₩ 10,000</strong
+                  >
+                </div>
+                <div class="budget-progress">
+                  <span class="budget-progress-fill traffic-fill"></span>
+                </div>
+              </article>
             </div>
           </section>
 
@@ -128,6 +192,13 @@
                 <input type="checkbox" class="setting-toggle-input" checked />
                 <span class="setting-toggle-slider"></span>
               </label>
+            </article>
+            <article class="setting-summary-card">
+              <p class="setting-summary-title">이번 달 요약</p>
+              <p class="setting-summary-text">
+                충동구매가 전체 소비의 32%예요.<br />
+                다음 달엔 같이 줄여봐요 💌
+              </p>
             </article>
           </section>
         </div>

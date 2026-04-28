@@ -47,10 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ============ home 원형 그래프 ============
-  const ring = document.querySelector(".chart-ring");
-  const percentText = document.querySelector(".chart-percent");
+  const rings = document.querySelectorAll(".chart-ring");
+  const percents = document.querySelectorAll(".chart-percent");
 
-  if (ring && percentText) {
+  rings.forEach((ring, index) => {
+    const percentText = percents[index];
+
     let current = 0;
     const targetPercent = 57;
     const targetDeg = Math.round((360 * targetPercent) / 100);
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     animate();
-  }
+  });
 
   // ============ record 금액 입력 ============
   const amountInput = document.getElementById("amount");
