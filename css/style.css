@@ -1665,6 +1665,29 @@ img {
   }
 }
 
+.emotion-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .emotion-legend {
+    margin-top: 14px;
+  }
+}
+
+.emotion-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .emotion-icon {
   width: 16px;
   height: 16px;
