@@ -605,7 +605,7 @@ img {
 /* Section */
 .signin-section {
   width: 100%;
-  margin-top: 52px;
+  margin-top: 40px;
 }
 
 .signin-title {
@@ -699,7 +699,7 @@ img {
 /* Login Button */
 .signin-btn {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 28px;
   height: 46px;
   border-radius: 6px;
 }
@@ -707,7 +707,7 @@ img {
 /* Social */
 .social-login {
   width: 100%;
-  margin-top: 84px;
+  margin-top: 56px;
   text-align: center;
 }
 
@@ -732,7 +732,7 @@ img {
   display: flex;
   justify-content: center;
   gap: var(--spacing-16);
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-24);
 }
 
 .social-btn {
@@ -1031,11 +1031,11 @@ img {
 
 .signup-section {
   width: 100%;
-  margin-top: 56px;
+  margin-top: 42px;
 }
 
 .signup-title {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .signup-form {
@@ -1046,14 +1046,14 @@ img {
 
 .signup-btn {
   width: 100%;
-  margin-top: 40px;
+  margin-top: 28px;
   height: 46px;
   border-radius: 6px;
 }
 
 .signup-social {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 44px;
   text-align: center;
 }
 
